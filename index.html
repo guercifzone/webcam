@@ -1,68 +1,17 @@
-<!DOCTYPE html>
-<html>
-        <head>
-                <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
-            <!--كود تحريك عنوان الصفحة-->
-<script type='text/javascript'>
-var txt="إلتقط صورة لنفسك.. ";
-var espera=200;
-var refresco=null;
-function rotulo_title()
-{
-document.title=txt;
-txt=txt.substring(1,txt.length)+txt.charAt(0); refresco=setTimeout("rotulo_title()",espera);
+<div id="container">
+	<video autoplay="true" id="videoElement">
+	
+	</video>
+<script>
+  var video = document.querySelector("#videoElement");
+
+if (navigator.mediaDevices.getUserMedia) {
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(function (stream) {
+      video.srcObject = stream;
+    })
+    .catch(function (err0r) {
+      console.log("Something went wrong!");
+    });
 }
-rotulo_title();
-</script>
-     <link rel="stylesheet" type="text/css" href="style.css"/>
-     <link rel="shortcut icon" href="img/favicon.ico" />
-	 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
-	 <link rel="stylesheet" href="css/Main.css" type="text/css" media="all" />
-     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	 <script type="text/javascript" src="js/functions.js"></script>
-        </head>
-        <body>
-<!-- <device type="media" onchange="update(this.data)"> -->
-<video autoplay >المرجو استخدام  متصفح  متقدم او استخدم  غوغل كروم </video>
-<img src="" alt=""/>
-<canvas style="display:none;"> </canvas>
-<div>
-    <button id="btn">إلتقط صـورة</button>
-</div>
-<script type="text/javascript" src="Script.js"></script>
-            <div class="vertical-nav-holder">
-	<a href="#" class="vertical-nav-btn"><i class="fa fa-share-alt"></i></a>
-
-	<div class="vertical-nav">
-		<ul>
-			<li>
-				<a href="mailto:sadik.fattah@outlook.com"><i class="fa fa-envelope"></i></a>
-			</li>
-
-			<li>
-				<a href="https://twitter.com/SadikFattah"><i class="fa fa-skype"></i></a>
-			</li>
-
-			<li>
-				<a href="https://www.google.com/maps/@34.231949,-3.3473116,13z" target="_blank"><i class="fa fa-map-marker"></i></a>
-			</li>
-
-			<li>
-				<a href="https://www.facebook.com/sadik.fattah.7" target="_blank"><i class="fa fa-facebook"></i></a>
-			</li>
-
-			<li>
-				<a href="https://plus.google.com/+%D8%B5%D8%AF%D9%8A%D9%82%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D9%81%D8%AA%D8%A7%D8%AD12/posts" target="_blank"><i class="fa fa-google-plus"></i></a>
-			</li>
-		</ul>
-	</div><!-- /.vertical-nav -->
-</div><!-- /.vertical-nav-holder -->
-
-<div class="vertical-nav-overlay"></div><!-- /.vertical-nav-overlay -->
-            <!--footer-->
-                    <div id="footer">
-        
-       
-        </div>
-        </body>
-</html>
+    </script>
