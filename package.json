@@ -1,0 +1,26 @@
+{
+  "name": "webcam",
+  "version": "0.0.1",
+  "description": "desktop webcam filter like snap and  tiktok",
+  "main": "home.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guercifzone/webcam.git"
+  },
+  "keywords": [
+    "webcam",
+    "filter",
+    "snapchat",
+    "tiktok"
+  ],
+  "author": "Sadik-fattah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guercifzone/webcam/issues"
+  },
+  "homepage": "https://github.com/guercifzone/webcam#readme"
+}
